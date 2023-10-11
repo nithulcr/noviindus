@@ -340,6 +340,14 @@ header{
 .work-slide.last-slide:hover .work-slide-caption{
    right: 0;
 }
+.work-slide.center-slide:hover img{
+   left: 50%;
+   transform: translateX(-50%);
+}
+.work-slide.center-slide:hover .work-slide-caption{
+   left: 50%;
+   transform: translateX(-50%);
+}
 
 .work-slide-caption{
     position: absolute;
@@ -362,7 +370,67 @@ header{
 /*works end*/
 /*markets start*/
 /*works start*/
+.marketer_section .carousel-indicators{
+                    position: relative;
+                    margin: 0;
+                   left: 20px;
+                    top: auto;
+                    bottom: auto;
 
+                    flex-direction: column;
+                                }
+                .marketer_section .carousel-inner {
+                   
+                    padding-left: 6px;
+                }
+                .marketer-slider2{
+                    display: flex;
+                    align-items: center;
+                    margin-top: 50px;
+                }
+                .marketer_section .carousel-indicators li{
+                    background: initial!important;
+                    text-indent: 99px!important;
+                    width: 100%;
+                    height: 20px;
+                    font-size: 14px;
+                    color: #0056FF;
+                    font-weight: 600;
+                    opacity: .5;
+                    direction: rtl;
+                }
+                .marketer_section .carousel-indicators li.active{
+                    opacity: 1;
+                }
+                .carousel-control-prev {
+                    position: relative;
+                    background-color: #0056ff;
+                    opacity: 1;
+                   
+                    width: 40px;
+                   transform: rotate(90deg);
+                    height: 40px;
+                   
+                    background-position: center;
+                    margin-bottom: 4px;
+                }
+                .carousel-control-next {
+                    position: relative;
+                    background-color: #0056ff;
+                    opacity: 1;
+                   
+                    width: 40px;
+                   transform: rotate(-90deg);
+                    height: 40px;
+                    
+                    background-position: center;
+                }
+                .carousel-control-prev-icon{
+                     background-image: url(../images/arrow-previous.png);
+                }
+                .carousel-control-next-icon{
+                     background-image: url(../images/arrow-previous.png);
+                }
 .marketer_section {
     padding: 100px 50px;
    
@@ -441,9 +509,7 @@ header{
     color: #0056FF;
     opacity: 1;
 }
-.work-slide{
-    cursor: grab;
-}
+
 /*markets end*/
 /*news start*/
 .carousel-caption.news-carousel-caption{
@@ -599,7 +665,8 @@ header{
     }
     .header-right {
         flex-direction: column;
-        height: 100vh;
+        height: 110vh;
+        overflow: hidden;
         width: 100vw;
         position: fixed;
         top: 0;
@@ -609,7 +676,7 @@ header{
         padding-top: 120px;
          gap: 40px;
          background: white;
-         z-index: 99;
+
     }
     .header-right.open{
         right: 0;
@@ -644,5 +711,9 @@ header{
     .carousel2-caption h6 {
         font-size: 30px;
         line-height: 50px;
+    }
+
+    .marketer_section .carousel-indicators li{
+        height: 40px;
     }
 }
